@@ -11,13 +11,15 @@
 		"white_muted": "color(var(white) alpha(0.8))",
 		"black": "hsl(0, 0%, 0%)",
 		"black_muted": "color(var(black) alpha(0.8))",
+		"gray_blue": "hsl(221, 17%, 22%)",
+		"gray_blue_light": "hsl(221, 20%, 90%)",
 		"green_muted":"hsl(90, 28%, 72%)",
 		"green_dark": "hsl(95, 70%, 30%)",
 
-		"dark_bg": "color(var(--background) blend(white 82%))",
-		"medium_dark_bg": "color(var(--background) blend(white 87%))",
-		"medium_bg": "color(var(--background) blend(black 85%))",
-		"light_bg": "color(var(--background) blend(black 90%))",
+		"dark_bg": "color(var(gray_blue) blend(white 100%))",
+		"medium_dark_bg": "color(var(gray_blue) blend(white 93%))",
+		"medium_bg": "color(var(gray_blue_light) blend(black 85%))",
+		"light_bg": "color(var(gray_blue_light) blend(black 97%))",
 
 		"link_fg": "hsl(215, 60%, 50%)",
 
@@ -42,8 +44,7 @@
 
 		"tabset_dark_tint_mod": "color(white a(0.15))",
 		"tabset_dark_bg": "var(dark_bg)",
-		//"tabset_medium_dark_tint_mod": "var(medium_dark_bg)",
-		"tabset_medium_dark_tint_mod": "var(yellow)",
+		"tabset_medium_dark_tint_mod": "color(white a(0.15))",
 		"tabset_medium_dark_bg": "var(medium_dark_bg)",
 		"tabset_medium_tint_mod": "color(black a(0.2))",
 		"tabset_medium_bg": "var(medium_bg)",
@@ -51,14 +52,12 @@
 		"tabset_light_bg": "var(light_bg)",
 
 		"file_tab_angled_unselected_dark_tint": "color(white a(0.08))",
-		//"file_tab_angled_unselected_medium_dark_tint": "color(black a(0.2))",
-		"file_tab_angled_unselected_medium_dark_tint": "var(pink)",
+		"file_tab_angled_unselected_medium_dark_tint": "color(black a(0.2))",
 		"file_tab_angled_unselected_medium_tint": "color(black a(0.15))",
 		"file_tab_angled_unselected_light_tint": "color(black a(0.06))",
 
 		"file_tab_selected_dark_tint": "color(var(tabset_dark_tint_mod) a(- 70%))",
-		//"file_tab_selected_medium_dark_tint": "color(var(tabset_medium_dark_tint_mod) a(- 70%))",
-		"file_tab_selected_medium_dark_tint": "var(blue)",
+		"file_tab_selected_medium_dark_tint": "color(var(tabset_medium_dark_tint_mod) a(- 70%))",
 		"file_tab_selected_medium_tint": "color(var(tabset_medium_tint_mod) a(- 70%))",
 		"file_tab_selected_light_tint": "color(var(tabset_light_tint_mod) a(- 70%))",
 
@@ -136,7 +135,7 @@
 		{
 			"class": "title_bar",
 			"settings": ["themed_title_bar"],
-			"fg": "color(var(--background) blend(white 30%))",
+			"fg": "color(var(--background) blend(white 10%))",
 			"style": "system"
 		},
 		{
@@ -180,7 +179,7 @@
 		{
 			"class": "sidebar_container",
 			"parents": [{"class": "window", "attributes": ["file_dark"]}],
-			"layer0.tint": "color(var(dark_bg) blend(black 70%))",
+			"layer0.tint": "color(var(gray_blue) blend(black 70%))",
 		},
 		{
 			"class": "sidebar_container",
@@ -242,14 +241,14 @@
 		{
 			"class": "tree_row",
 			"attributes": ["selected"],
-			"layer0.tint": "color(white a(0.1))",
+			"layer0.tint": "color(white a(0.18))",
 			"layer0.opacity": 0.6,
 		},
 		{
 			"class": "tree_row",
 			"attributes": ["selected"],
 			"parents": [{"class": "window", "attributes": ["file_medium"]}],
-			"layer0.tint": "color(white a(0.1))",
+			"layer0.tint": "color(white a(0.16))",
 		},
 		{
 			"class": "tree_row",
@@ -264,7 +263,7 @@
 		},
 		{
 			"class": "sidebar_heading",
-			"fg": "color(var(--background) blend(white 40%))",
+			"fg": "color(var(gray_blue) blend(white 45%))",
 			"font.face": "var(font_face)",
 			"font.size": "var(font_size_lg)",
 			"font.bold": true,
@@ -274,19 +273,19 @@
 		{
 			"class": "sidebar_heading",
 			"parents": [{"class": "window", "attributes": ["file_light"]}],
-			"fg": "color(var(--background) blend(black 30%))",
+			"fg": "color(var(gray_blue_light) blend(black 30%))",
 			"shadow_color": "color(white a(0.1))",
 		},
 		{
 			"class": "sidebar_label",
-			"fg": "color(var(--background) blend(white 20%))",
+			"fg": "color(var(gray_blue) blend(white 25%))",
 			"font.face": "var(font_face)",
 			"font.size": "var(font_size)"
 		},
 		{
 			"class": "sidebar_label",
 			"parents": [{"class": "window", "attributes": ["file_light"]}],
-			"fg": "color(var(--background) blend(black 0%))",
+			"fg": "color(var(gray_blue_light) blend(black 0%))",
 		},
 		{
 			"class": "sidebar_label",
@@ -441,7 +440,7 @@
 			"class": "icon_file_type",
 			"layer0.tint": "white",
 			"layer0.opacity": 0.5,
-			"content_margin": [9, 8]
+			"content_margin": [0, 8]
 		},
 		{
 		    "class": "icon_file_type",
@@ -1195,6 +1194,23 @@
 			"parents": [{"class": "tab_control", "attributes": ["deleted"]}],
 			"layer0.tint": "var(vcs_deleted)",
 		},
+		// {
+		// 	"class": "tab_close_button",
+		// 	"settings": {"file_tab_style": ["", "rounded", "square"]},
+		// 	"parents": [
+		// 		{"class": "tab_control", "attributes": ["!selected", "!hover"]}
+		// 	],
+		// 	"layer0.tint": "white"
+		// },
+		// {
+		// 	"class": "tab_close_button",
+		// 	"settings": {"file_tab_style": ["", "rounded", "square"]},
+		// 	"parents": [
+		// 		{"class": "edit_window", "attributes": ["file_light"]},
+		// 		{"class": "tab_control", "attributes": ["!selected", "!hover"]}
+		// 	],
+		// 	"layer0.tint": "black"
+		// },
 		// Tab scrolling
 		{
 			"class": "scroll_tabs_left_button",
@@ -1341,29 +1357,29 @@
 		// Quick Panel
 		{
 			"class": "overlay_control",
-			"layer0.tint": "color(var(--background) blend(black 60%))",
+			"layer0.tint": "color(var(gray_blue) blend(black 60%))",
 			"layer0.opacity": 1.0,
 			"content_margin": 4
 		},
 		{
 			"class": "overlay_control",
 			"parents": [{"class": "window", "attributes": ["file_dark"]}],
-			"layer0.tint": "var(dark_bg)",
+			"layer0.tint": "var(gray_blue)",
 		},
 		{
 			"class": "overlay_control",
 			"parents": [{"class": "window", "attributes": ["file_medium_dark"]}],
-			"layer0.tint": "var(medium_dark_bg)",
+			"layer0.tint": "var(gray_blue)",
 		},
 		{
 			"class": "overlay_control",
 			"parents": [{"class": "window", "attributes": ["file_medium"]}],
-			"layer0.tint": "var(medium_bg)",
+			"layer0.tint": "var(gray_blue_light)",
 		},
 		{
 			"class": "overlay_control",
 			"parents": [{"class": "window", "attributes": ["file_light"]}],
-			"layer0.tint": "var(light_bg)",
+			"layer0.tint": "var(gray_blue_light)",
 		},
 		{
 			"class": "quick_panel",
@@ -1948,7 +1964,7 @@
 		// Panels
 		{
 			"class": "panel_control",
-			"layer0.tint": "color(var(--background) blend(black 50%))",
+			"layer0.tint": "var(gray_blue)",
 			"layer0.opacity": 1.0,
 			"content_margin": 2
 		},
@@ -1964,22 +1980,22 @@
 		{
 			"class": "panel_control",
 			"parents": [{"class": "window", "attributes": ["file_dark"]}],
-			"layer0.tint": "color(var(--background) blend(white 88%))",
+			"layer0.tint": "color(var(dark_bg) blend(white 95%))",
 		},
 		{
 			"class": "panel_control",
 			"parents": [{"class": "window", "attributes": ["file_medium_dark"]}],
-			"layer0.tint": "color(var(--background) blend(white 95%))",
+			"layer0.tint": "color(var(medium_dark_bg) blend(white 90%))",
 		},
 		{
 			"class": "panel_control",
 			"parents": [{"class": "window", "attributes": ["file_medium"]}],
-			"layer0.tint": "color(var(--background) blend(black 70%))",
+			"layer0.tint": "color(var(medium_bg) blend(white 90%))",
 		},
 		{
 			"class": "panel_control",
 			"parents": [{"class": "window", "attributes": ["file_light"]}],
-			"layer0.tint": "color(var(--background) blend(black 82%))",
+			"layer0.tint": "color(var(gray_blue_light) blend(black 80%))",
 		},
 		{
 			"class": "panel_control",
@@ -2708,7 +2724,7 @@
 		// Status Bar
 		{
 			"class": "status_bar",
-			"layer0.tint": "color(var(--background) blend(black 50%))",
+			"layer0.tint": "var(gray_blue)",
 			"layer0.opacity": 1.0,
 			"layer1.texture": "Theme - Default/common/footer_divider.png",
 			"layer1.inner_margin": [0, 1, 0, 1],
@@ -2733,22 +2749,22 @@
 		{
 			"class": "status_bar",
 			"parents": [{"class": "window", "attributes": ["file_dark"]}],
-			"layer0.tint": "color(var(--background) blend(white 90%))",
+			"layer0.tint": "color(var(dark_bg) blend(white 100%))",
 		},
 		{
 			"class": "status_bar",
 			"parents": [{"class": "window", "attributes": ["file_medium_dark"]}],
-			"layer0.tint": "color(var(--background) blend(white 90%))",
+			"layer0.tint": "color(var(medium_dark_bg) blend(white 95%))",
 		},
 		{
 			"class": "status_bar",
 			"parents": [{"class": "window", "attributes": ["file_medium"]}],
-			"layer0.tint": "color(var(--background) blend(black 70%))",
+			"layer0.tint": "var(gray_blue)",
 		},
 		{
 			"class": "status_bar",
 			"parents": [{"class": "window", "attributes": ["file_light"]}],
-			"layer0.tint": "color(var(--background) blend(black 90%))",
+			"layer0.tint": "color(var(gray_blue_light) blend(black 90%))",
 		},
 		{
 			"class": "status_bar",
@@ -2791,7 +2807,7 @@
 		{
 			"class": "label_control",
 			"parents": [{"class": "status_bar"}],
-			"fg": "color(var(--background) blend(white 30%))",
+			"fg": "color(var(--background) blend(white 20%))",
 			"font.size": "var(font_size_sm)",
 			"shadow_color": "color(black a(0.18))",
 			"shadow_offset": [0, 1]
