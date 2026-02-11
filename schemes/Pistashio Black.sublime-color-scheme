@@ -4,9 +4,9 @@
     "variables":
     {
         "black": "hsl(0, 0%, 0%)", // #000000
-        "blue": "hsl(227, 50%, 75%)", // 
-        "blue2": "hsl(206, 20%, 65%)", // #64AFE8
-        "blue3": "hsl(223, 40%, 65%)", // #4D7EFF
+        "blue": "hsl(227, 50%, 75%)", // #9FADDF
+        "blue2": "hsl(206, 20%, 65%)", // #94A8B8
+        "blue3": "hsl(223, 40%, 65%)", // #8296C9
         "gray": "hsl(0, 0%, 0%)", // #000000
         "gray2": "hsl(216, 10%, 20%)", // #2E3138
         "gray3": "hsl(216, 10%, 26%)", // #3C4149
@@ -24,7 +24,7 @@
         "red4": "hsl(309, 92%, 48%)", // #ED0ACB
         "red5": "hsl(345, 68%, 35%)", // #961D3C
         "teal": "hsl(184, 25%, 70%)", // #53BEC6
-        "white": "hsl(224, 12%, 75%)", // 
+        "white": "hsl(224, 12%, 75%)", // #B8BCC7
         "yellow": "hsl(60, 20%, 65%)", // 
         "yellow2": "hsl(60, 56%, 60%)", // #D2D260
         "yellow3": "hsl(58, 15%, 50%)" // 
@@ -44,7 +44,7 @@
         "selection_border": "var(gray5)",
         "inactive_selection": "var(gray2)",
         "invisibles": "var(gray3)",
-        "line_highlight": "var(gray4)",
+        "line_highlight": "color(var(gray4) alpha(0.7))",
         "misspelling": "var(red)",
         "shadow": "color(var(gray) alpha(0.25))",
         "guide": "color(var(white) alpha(0.2))",
